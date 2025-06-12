@@ -1,8 +1,9 @@
 {
     // Wrangler configuration file for your project
-    "name": "marcos-landi-website",
+    "name": "website",
     "compatibility_date": "2025-06-12",
     "assets": {
-        "directory": "./dist"
+        "directory": "./dist",
+        "not_found_handling": "single-page-application" // redirect to index.html if file not found
     }
 }
