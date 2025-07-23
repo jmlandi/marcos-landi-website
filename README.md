@@ -11,8 +11,8 @@ A clean, single‑page portfolio built with **Next.js 15**, **Tailwind CSS**,
 | **Tailwind & Liquid‑Glass UI** | Glass‑like cards and utility‑first styling for rapid tweaks. |
 | **TypeScript** | End‑to‑end type safety. |
 | **Animated Gradient Background** | Subtle motion for a polished feel. |
-| **Contact Form** | Sends submissions to your API endpoint. |
-| **Ready‑to‑extend MVP** | Add pages or components as your portfolio grows. |
+| **Contact Form** | Sends submissions to my API endpoint. |
+| **Ready‑to‑extend MVP** | Add pages or components as my portfolio grows. |
 
 ---
 
@@ -31,34 +31,14 @@ npm run dev      # open http://localhost:3000
 npm run build    # Compile for production
 npm start        # Serve on port 3000
 ```
-
-> **Static export**: `next export` outputs an **/out** folder ready for static hosts (Cloudflare Pages, Netlify, S3).
-
 ---
 
 ## 🚀 Deployment Options
 
 | Host | Notes |
 |------|-------|
-| **Vercel** | Zero‑config—push to GitHub and deploy. |
-| **Cloudflare Pages** | Export statically or use *next‑on‑pages* for dynamic routes. |
+| **Cloudflare Pages** | commands: `npm run build && npx wrangler deploy` |
 | **Any Node host** | `npm run build && npm start`. |
-
----
-
-## 🔗 API Endpoint
-
-```http
-POST https://marcos-landi-api.onrender.com/api/contact
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phoneNumber": 5551234,
-  "message": "Hello, I'd like a custom landing page."
-}
-```
 
 ---
 
@@ -74,14 +54,6 @@ marcos-landi-site/
 ├─ .next/             # Build output (after npm run build)
 └─ README.md
 ```
-
----
-
-## 🤝 Contributing
-
-Pull requests welcome. Please keep code tidy and write helpful commit messages.
-
----
 
 ## 🎞️ Thank you!
 
