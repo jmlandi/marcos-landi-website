@@ -2,7 +2,7 @@
     "name": "website",
     "compatibility_date": "2025-07-23",
     "assets": {
-        "directory": "./next",
+        "directory": "./out",
         "not_found_handling": "single-page-application" // redirect to index.html if file not found
     }
 }
