@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .bg-moving-gradient {
+    background: linear-gradient(135deg, #0a192f 0%, #1e3d8f 50%, #0a192f 100%);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+  }
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

@@ -1,54 +1,36 @@
-# Marcos Landi Personal Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to the repository for my personal website! This project showcases my portfolio, blog, and other content that represents my work and interests. Built using [Astro](https://astro.build), this site is designed to be fast, modern, and easy to maintain.
+## Getting Started
 
-## 🚀 Project Structure
+First, run the development server:
 
-The project is intended to be organized as follows:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       ├── index.astro
-│       ├── about.astro
-│       └── blog/
-│           └── [posts].astro
-└── package.json
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-- **`public/`**: Contains static assets like images and icons.
-- **`src/`**: Contains the main source code for the website, including layouts, pages, and components.
-- **`dist/`**: Generated during the build process, contains the production-ready files.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🧞 Commands
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Run the following commands from the root of the project:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Builds the production site to `./dist/`          |
-| `npm run preview`         | Previews the production build locally            |
-| `npm run astro ...`       | Run Astro CLI commands like `astro add`          |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Learn More
 
-## 🌟 Features
+To learn more about Next.js, take a look at the following resources:
 
-- **Portfolio**: Highlights my projects and achievements.
-- **Blog**: A space for sharing thoughts, tutorials, and updates.
-- **Responsive Design**: Optimized for viewing on all devices.
-- **Fast Performance**: Built with Astro for lightning-fast load times.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 👀 Want to learn more?
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Check out [Astro's documentation](https://docs.astro.build) for more information about the framework used to build this site.
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Thank you for visiting my personal website repository! Feel free to explore the code and reach out if you have any questions or feedback.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
