@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marcos Landi – Personal Website
 
-## Getting Started
+A clean, single‑page portfolio built with **Next.js 15**, **Tailwind CSS**, and **TypeScript**.
 
-First, run the development server:
+---
+
+## ✨ Key Features
+| Feature | Description |
+|---------|-------------|
+| **Next.js App Router** | Modern routing, server components, and fast refresh. |
+| **Tailwind & Liquid‑Glass UI** | Glass‑like cards and utility‑first styling for rapid tweaks. |
+| **TypeScript** | End‑to‑end type safety. |
+| **Animated Gradient Background** | Subtle motion for a polished feel. |
+| **Contact Form** | Sends submissions to your API endpoint. |
+| **Ready‑to‑extend MVP** | Add pages or components as your portfolio grows. |
+
+---
+
+## 🛠️ Quickstart
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-handle/marcos-landi-site.git
+cd marcos-landi-site
+npm install      # or pnpm / yarn
+npm run dev      # open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build    # Compile for production
+npm start        # Serve on port 3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> **Static export**: `next export` outputs an **/out** folder ready for static hosts (Cloudflare Pages, Netlify, S3).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment Options
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Host | Notes |
+|------|-------|
+| **Vercel** | Zero‑config—push to GitHub and deploy. |
+| **Cloudflare Pages** | Export statically or use *next‑on‑pages* for dynamic routes. |
+| **Any Node host** | `npm run build && npm start`. |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔗 API Endpoint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```http
+POST https://marcos-landi-api.onrender.com/api/contact
+Content-Type: application/json
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phoneNumber": 5551234,
+  "message": "Hello, I'd like a custom landing page."
+}
+```
+
+---
+
+## 📁 Project Structure
+
+```
+marcos-landi-site/
+├─ app/               # Next.js pages (App Router)
+│  ├─ page.tsx        # Hero + Contact
+│  └─ layout.tsx      # HTML shell
+├─ styles/            # Tailwind globals
+├─ public/            # Static assets (favicon, images)
+├─ .next/             # Build output (after npm run build)
+└─ README.md
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests welcome. Please keep code tidy and write helpful commit messages.
+
+---
+
+## 🎞️ Thank you!
+
+<img width="100%" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjQ3YWJ0dnV5cDZ1NWU1M2hka3RnZzVhaHdob3dyaDBlOG10bW5uNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CkzASXWphfkQ5CF6ny/giphy.gif"/>
