@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Marcos Landi | Full‑Stack Engineer",
+  title: "Marcos Landi | Full-Stack & Data Engineer",
   description:
-    "Portfolio and contact page for Marcos Landi — Java, Node, React, Next.js, Python, Data & AI.",
+    "Contact page for Marcos Landi.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-moving-gradient antialiased text-white selection:bg-indigo-600/70">
+      <body className="w-full max-w-screen min-h-screen">
         {children}
       </body>
     </html>
