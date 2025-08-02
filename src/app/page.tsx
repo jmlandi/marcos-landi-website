@@ -14,13 +14,13 @@ export default function Home() {
         <Image src="/landi.jpg" alt="Marcos Landi" width={800} height={1200} className="w-max h-max" />
       </div>
       {/* Main Content */}
-      <div className="flex flex-col justify-center items-center w-screen sm:w-1/2 h-1/2 sm:h-screen gap-5 p-16">
+      <div className="flex flex-col justify-center items-ceter w-screen sm:w-1/2 h-1/2 sm:h-screen gap-5 p-5 sm:p-16">
         {/* Title and paragraph */}
         <div className="flex flex-col items-start gap-2 text-start">
-          <h1 className="custom-color text-[4rem] tracking-tighter">
+          <h1 className="custom-color text-4xl sm:text-[4rem] tracking-tighter">
             <span className="custom-serif-bold-italic">Marcos </span><span className="custom-serif">Landi</span>
           </h1>
-          <p className="text-justify tracking-tight">
+          <p className="text-justify tracking-tight text-sm sm:text-base">
             I&apos;m a Full-Stack & Data Engineer with <span className="font-bold">7+ years</span> of experience across fintech, manufacturing/industrial, franchise networks, and e-commerce. I grew from “the marketing guy who hacked WordPress blogs” into a builder obsessed with scalable software architectures, data pipelines, growth analytics, AI automation, and <span className="font-bold">solving messy business problems fast.</span>
           </p>
         </div>

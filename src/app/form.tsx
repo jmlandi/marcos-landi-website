@@ -68,7 +68,7 @@ export function FormOverlay({ open, onClose }: FormOverlayProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-title"
-        className="flex flex-col items-start justify-center bg-[#625b49bb] text-white rounded-lg p-5 gap-5 relative w-full max-w-2xl"
+        className="flex flex-col items-start justify-center bg-[#625b49bb] text-white rounded-lg p-5 m-3 gap-5 relative w-full max-w-2xl"
       >
         {/* Close */}
         <button
@@ -119,7 +119,7 @@ export function FormOverlay({ open, onClose }: FormOverlayProps) {
             disabled={status === "loading"}
             className="inline-flex items-center justify-center rounded-lg bg-white/10 px-4 py-2 font-medium hover:bg-white/20 disabled:opacity-50"
           >
-            {status === "loading" ? "Sending..." : "send message"}
+            {status === "loading" ? "Sending..." : "Send message"}
           </button>
 
           {/* Status messages */}
