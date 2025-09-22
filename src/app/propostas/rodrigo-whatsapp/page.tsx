@@ -1,11 +1,25 @@
 "use client";
 import { useEffect } from "react";
+import {
+    Chart,
+    ChartData,
+    ChartOptions,
+    TooltipItem,
+    DoughnutController,
+    ArcElement,
+    Legend,
+    Title,
+    Tooltip,
+} from "chart.js";
 import Script from "next/script";
 import Head from "next/head";
 import React from "react";
 
+
 export default function PropostaRodrigoWhatsapp() {
     useEffect(() => {
+        // Register Chart.js components (for v4+ tree-shaking)
+        Chart.register(DoughnutController, ArcElement, Legend, Title, Tooltip);
         // Step navigation logic
         const steps = document.querySelectorAll<HTMLElement>(".step");
         const stepContents = document.querySelectorAll<HTMLElement>(".step-content");
@@ -45,14 +59,11 @@ export default function PropostaRodrigoWhatsapp() {
             });
         });
         // Chart.js logic
-        // @ts-expect-error canvas
-        if (window.Chart) {
-            // @ts-expect-error canvas
-            const ctx = document.getElementById("costChart").getContext("2d");
-            // @ts-expect-error canvas
-            new window.Chart(ctx, {
-                type: "doughnut",
-                data: {
+        const canvas = document.getElementById("costChart") as HTMLCanvasElement | null;
+        if (canvas) {
+            const ctx = canvas.getContext("2d");
+            if (ctx) {
+                const data: ChartData<"doughnut"> = {
                     labels: [
                         "n8n & Hospedagem",
                         "Banco de Dados",
@@ -74,8 +85,8 @@ export default function PropostaRodrigoWhatsapp() {
                             hoverOffset: 10,
                         },
                     ],
-                },
-                options: {
+                };
+                const options: ChartOptions<"doughnut"> = {
                     responsive: true,
                     maintainAspectRatio: false,
                     cutout: "60%",
@@ -91,7 +102,7 @@ export default function PropostaRodrigoWhatsapp() {
                         },
                         tooltip: {
                             callbacks: {
-                                label: function (context: any) {
+                                label: function (context: TooltipItem<"doughnut">) {
                                     let label = context.label || "";
                                     if (label) {
                                         label += ": ";
@@ -100,15 +111,20 @@ export default function PropostaRodrigoWhatsapp() {
                                         label += new Intl.NumberFormat("en-US", {
                                             style: "currency",
                                             currency: "USD",
-                                        }).format(context.parsed);
+                                        }).format(context.parsed as number);
                                     }
                                     return label;
                                 },
                             },
                         },
                     },
-                },
-            });
+                };
+                new Chart(ctx, {
+                    type: "doughnut",
+                    data,
+                    options,
+                });
+            }
         }
     }, []);
 
