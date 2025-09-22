@@ -22,13 +22,13 @@ export default function Home() {
             <span className="custom-serif-bold-italic">Marcos </span><span className="custom-serif">Landi</span>
           </h1>
           <p className="text-justify tracking-tight text-sm sm:text-base">
-            I&apos;m a Full-Stack & Data Engineer with experience across fintech, manufacturing/industrial, franchise networks, and e-commerce. I grew from “the marketing guy who hacked WordPress blogs” into a builder obsessed with scalable software architectures, data pipelines, growth analytics, AI automation, and <span className="font-bold">solving messy business problems fast.</span>
+            Sou Engenheiro Full-Stack & de Dados com experiência em fintech, indústria, redes de franquias e e-commerce. Evoluí de “o cara do marketing que hackeava blogs WordPress” para um construtor obcecado por arquiteturas escaláveis, pipelines de dados, analytics de crescimento, automação com IA e <span className="font-bold">resolver problemas de negócio rapidamente.</span>
           </p>
         </div>
         {/* Buttons */}
         <div className="flex flex-col items-center gap-2 text-start h-fit w-full">
           <button onClick={() => setFormOverlayOpen(true)} className="w-full p-3 rounded-4xl text-center custom-bg text-white text-2xl tracking-tighter">
-            <span className="custom-serif-bold">Get in</span><span className="custom-serif-italic pl-0.75">touch!</span>
+            <span className="custom-serif-bold">Entre em</span><span className="custom-serif-italic pl-0.75">contato!</span>
           </button>
           <FormOverlay open={formOverlayOpen} onClose={() => setFormOverlayOpen(false)} />
         {/* Socials */}
